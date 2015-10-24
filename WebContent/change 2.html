@@ -1,0 +1,60 @@
+<div ng-controller="formController">
+
+<div class="header">
+            <h1>Change Your Reservation</h1>
+        </div>
+        <div class="set">
+            <div class="container transbox" id="home">
+                <!--<h5>Your Current Reservation...</h5>-->
+               <!-- -->
+                    <!--<div class="col-xs-12 col-sm-6">-->
+                        <!--<table class="table table-condensed table-striped">-->
+                            <!--<thead>-->
+                            <!--<tr>-->
+                                <!--<th>Confrimation Number</th>-->
+                                <!--<th>Party Size</th>-->
+                                <!--<th>Date</th>-->
+                                <!--<th>Time</th>-->
+                            <!--</tr>-->
+                            <!--</thead>-->
+
+                            <!--<tr>-->
+                                <!--<td>{{guestId.id}}</td>-->
+                                <!--<td>{{guestId.partysize}}</td>-->
+                                <!--<td>{{guestId.date}}</td>-->
+                                <!--<td>{{guestId.time}}</td>-->
+                            <!--</tr>-->
+                          <!--</table>-->
+
+
+
+
+                        <form name="updateGuestForm" data-ng-submit="editReservation()">
+                            <div class = "form-group">
+                                <label for="date">I need a table On</label>
+                                <span><i class="glyphicon glyphicon-calendar"></i></span>
+                                <input type="date" name="date" ng-model="updateGuest.date" class="form-control" id="date">
+                                <div data-ng-messages="updateGuestForm.date.$error" class="error" ng-if="updateGuestForm.date.$dirty">
+                                    <p data-ng-message="required">Required</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">At</label>
+                                <span><i class="fa fa-clock-o"></i></span>
+                                <input type="time" name="time" ng-model="newGuest.time" required class="form-control" id="time">
+                                <div data-ng-messages="updateGuest.time.$error" class="error" ng-if="updateGuestForm.time.$dirty">
+                                    <p data-ng-message="required">Required</p>
+                                </div>
+                            </div>
+</form>
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-4">
+                    <button type="submit"  class="btn btn-primary btn-lg btn-block" style="align:center">Confirm Changes</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+</div>
